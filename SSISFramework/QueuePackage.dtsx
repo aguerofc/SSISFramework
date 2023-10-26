@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="QueuePackage"
   DTS:PackageType="5"
-  DTS:VersionBuild="353"
-  DTS:VersionGUID="{0CD74229-3A1C-4853-B95E-0105DE79FEFF}">
+  DTS:VersionBuild="357"
+  DTS:VersionGUID="{2AB31D92-E7CF-4DA0-A468-00C326FE3B4D}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -245,7 +245,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="EST Start Load"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="2">
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:LoggingOptions
             DTS:FilterKind="0"
@@ -270,6 +270,9 @@
               <SQLTask:ResultBinding
                 SQLTask:ResultName="4"
                 SQLTask:DtsVariableName="User::QueueCode" />
+              <SQLTask:ResultBinding
+                SQLTask:ResultName="5"
+                SQLTask:DtsVariableName="User::QueueName" />
               <SQLTask:ParameterBinding
                 SQLTask:ParameterName="@Level"
                 SQLTask:DtsVariableName="User::Level"
@@ -306,7 +309,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="EST Stop Load"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="2">
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:LoggingOptions
             DTS:FilterKind="0"
@@ -392,6 +395,10 @@
               <ParameterAssignment>
                 <ParameterName>QueueName</ParameterName>
                 <BindedVariableOrParameterName>User::QueueName</BindedVariableOrParameterName>
+              </ParameterAssignment>
+              <ParameterAssignment>
+                <ParameterName>PackageId</ParameterName>
+                <BindedVariableOrParameterName>User::PackageId</BindedVariableOrParameterName>
               </ParameterAssignment>
             </ExecutePackageTask>
           </DTS:ObjectData>
@@ -556,7 +563,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="EST Start Load"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="2">
           <DTS:Variables />
           <DTS:LoggingOptions
             DTS:FilterKind="0"
@@ -581,6 +588,9 @@
               <SQLTask:ResultBinding
                 SQLTask:ResultName="4"
                 SQLTask:DtsVariableName="User::QueueCode" />
+              <SQLTask:ResultBinding
+                SQLTask:ResultName="5"
+                SQLTask:DtsVariableName="User::QueueName" />
               <SQLTask:ParameterBinding
                 SQLTask:ParameterName="@Level"
                 SQLTask:DtsVariableName="User::Level"
@@ -617,7 +627,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="EST Stop Load"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="2">
           <DTS:Variables />
           <DTS:LoggingOptions
             DTS:FilterKind="0"
@@ -701,6 +711,10 @@
               <ParameterAssignment>
                 <ParameterName>QueueName</ParameterName>
                 <BindedVariableOrParameterName>User::QueueName</BindedVariableOrParameterName>
+              </ParameterAssignment>
+              <ParameterAssignment>
+                <ParameterName>PackageId</ParameterName>
+                <BindedVariableOrParameterName>User::PackageId</BindedVariableOrParameterName>
               </ParameterAssignment>
             </ExecutePackageTask>
           </DTS:ObjectData>
@@ -1085,7 +1099,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="EST Start Load"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:LoggingOptions
             DTS:FilterKind="0" />
@@ -1109,6 +1123,9 @@
               <SQLTask:ResultBinding
                 SQLTask:ResultName="4"
                 SQLTask:DtsVariableName="User::QueueCode" />
+              <SQLTask:ResultBinding
+                SQLTask:ResultName="5"
+                SQLTask:DtsVariableName="User::QueueName" />
               <SQLTask:ParameterBinding
                 SQLTask:ParameterName="@Level"
                 SQLTask:DtsVariableName="User::Level"
@@ -1145,7 +1162,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="EST Stop Load"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:LoggingOptions
             DTS:FilterKind="0" />
@@ -1228,6 +1245,10 @@
               <ParameterAssignment>
                 <ParameterName>QueueName</ParameterName>
                 <BindedVariableOrParameterName>User::QueueName</BindedVariableOrParameterName>
+              </ParameterAssignment>
+              <ParameterAssignment>
+                <ParameterName>PackageId</ParameterName>
+                <BindedVariableOrParameterName>User::PackageId</BindedVariableOrParameterName>
               </ParameterAssignment>
             </ExecutePackageTask>
           </DTS:ObjectData>
@@ -1545,7 +1566,7 @@
           PanelSize="721.333333333334,257.333333333334"
           Size="721.333333333334,300"
           Id="Package\FLC3"
-          TopLeft="552.458328667408,812.017549500459" />
+          TopLeft="547.124996079133,751.122811512161" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="281.749997708947,345.065792886505">
@@ -1616,30 +1637,30 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="237.749997708947,366.399126219839">
+          TopLeft="197.749997708947,366.399126219839">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="675.374997625128,445.61842328062"
+              EndConnector="710.041665036853,384.723685292323"
               Start="0,0"
-              End="675.374997625128,438.11842328062">
+              End="710.041665036853,377.223685292323">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,177.548246521734" />
+                    End="0,152.739279193168" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,177.548246521734"
-                    Point2="0,181.548246521734"
-                    Point3="4,181.548246521734" />
+                    Point1="0,152.739279193168"
+                    Point2="0,156.739279193168"
+                    Point3="4,156.739279193168" />
                   <mssgle:LineSegment
-                    End="671.374997625128,181.548246521734" />
+                    End="706.041665036853,156.739279193168" />
                   <mssgle:CubicBezierSegment
-                    Point1="671.374997625128,181.548246521734"
-                    Point2="675.374997625128,181.548246521734"
-                    Point3="675.374997625128,185.548246521734" />
+                    Point1="706.041665036853,156.739279193168"
+                    Point2="710.041665036853,156.739279193168"
+                    Point3="710.041665036853,160.739279193168" />
                   <mssgle:LineSegment
-                    End="675.374997625128,438.11842328062" />
+                    End="710.041665036853,377.223685292323" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

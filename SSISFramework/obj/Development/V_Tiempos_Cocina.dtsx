@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="DataFlow"
   DTS:PackageType="5"
-  DTS:VersionBuild="232"
-  DTS:VersionGUID="{25563ECE-CD22-4753-B458-AF7F9FC47692}">
+  DTS:VersionBuild="249"
+  DTS:VersionGUID="{04675071-5DE6-42F4-AFAD-6206941736CA}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -87,6 +87,15 @@
     <DTS:PackageParameter
       DTS:CreationName=""
       DTS:DataType="3"
+      DTS:DTSID="{B9B9A6FB-3E0A-47BA-8452-BA830EF0D956}"
+      DTS:ObjectName="PackageId">
+      <DTS:Property
+        DTS:DataType="3"
+        DTS:Name="ParameterValue">1</DTS:Property>
+    </DTS:PackageParameter>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="3"
       DTS:DTSID="{B9128888-AD7E-4159-83FF-14EB05F7F63E}"
       DTS:ObjectName="QueueCode">
       <DTS:Property
@@ -100,7 +109,7 @@
       DTS:ObjectName="QueueName">
       <DTS:Property
         DTS:DataType="8"
-        DTS:Name="ParameterValue">Pinares</DTS:Property>
+        DTS:Name="ParameterValue">LoremIpsumDolorSitAmetConsecteturDipiscing</DTS:Property>
     </DTS:PackageParameter>
     <DTS:PackageParameter
       DTS:CreationName=""
@@ -125,6 +134,15 @@
   <DTS:Variables>
     <DTS:Variable
       DTS:CreationName=""
+      DTS:DTSID="{42CA9475-42D1-41F6-8342-A31295BC0C20}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="DateProcess">
+      <DTS:VariableValue
+        DTS:DataType="8">2021-01-01</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
       DTS:DTSID="{D87E5247-FA59-4EBA-A397-B41E29B59427}"
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="User"
@@ -136,13 +154,13 @@
       DTS:CreationName=""
       DTS:DTSID="{CB028BC7-9E0C-4BB2-8C52-1B75EED0A562}"
       DTS:EvaluateAsExpression="True"
-      DTS:Expression="&quot;&#xA;SELECT &quot; + (DT_WSTR, 6) @[$Package::QueueCode]  +&quot; AS FrontId, '&quot; + @[$Package::QueueName]  + &quot;' AS FrontName  ,[Dpto]&#xA;      ,[Nombre_Departamento]&#xA;      ,[Seccion]&#xA;      ,[Nombre_Seccion]&#xA;      ,[Referencia]&#xA;      ,[NombreVendedor]&#xA;      ,[IdLineaPedido]&#xA;      ,[IdPedido]&#xA;      ,[IdArticulo]&#xA;      ,[Descripcion]&#xA;      ,[Orden]&#xA;      ,[Estado]&#xA;      ,[Unidades]&#xA;      ,[IsAnulada]&#xA;      ,[TicksPedido]&#xA;      ,[TicksAPreparar]&#xA;      ,[TicksInicioPreparacion]&#xA;      ,[TicksPreparado]&#xA;      ,[TicksServido]&#xA;      ,[duracionTotalSegundos]&#xA;      ,[dddDuraPedidoaPreparar]&#xA;      ,[dddDuraPrepararAIniciaPrep]&#xA;      ,[dddDuraIniciaPrepAPreparado]&#xA;      ,[dddDuraPreparadoaServido]&#xA;      ,[duracionTotal]&#xA;      ,[RANGO]&#xA;  FROM [dbo].[V_Tiempos_Cocina]&#xA;&quot;"
+      DTS:Expression="&quot;&#xA;SELECT &quot; + (DT_WSTR, 6) @[$Package::QueueCode]  +&quot; AS FrontId, '&quot; + @[$Package::QueueName]  + &quot;' AS FrontName  ,[Dpto]&#xA;      ,[Nombre_Departamento]&#xA;      ,[Seccion]&#xA;      ,[Nombre_Seccion]&#xA;      ,[Referencia]&#xA;      ,[NombreVendedor]&#xA;      ,[IdLineaPedido]&#xA;      ,[IdPedido]&#xA;      ,[IdArticulo]&#xA;      ,[Descripcion]&#xA;      ,[Orden]&#xA;      ,[Estado]&#xA;      ,[Unidades]&#xA;      ,[IsAnulada]&#xA;      ,[TicksPedido]&#xA;      ,[TicksAPreparar]&#xA;      ,[TicksInicioPreparacion]&#xA;      ,[TicksPreparado]&#xA;      ,[TicksServido]&#xA;      ,[duracionTotalSegundos]&#xA;      ,[dddDuraPedidoaPreparar]&#xA;      ,[dddDuraPrepararAIniciaPrep]&#xA;      ,[dddDuraIniciaPrepAPreparado]&#xA;      ,[dddDuraPreparadoaServido]&#xA;      ,[duracionTotal]&#xA;      ,[RANGO]&#xA;  FROM [dbo].[V_Tiempos_Cocina]&#xA;  WHERE CONVERT( DATE,TicksPedido) &gt;='&quot; +    @[User::DateProcess]    + &quot;'&quot;"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="SQLStaging">
       <DTS:VariableValue
         DTS:DataType="8">
-SELECT 1 AS FrontId, 'Pinares' AS FrontName  ,[Dpto]
+SELECT 1 AS FrontId, 'LoremIpsumDolorSitAmetConsecteturDipiscing' AS FrontName  ,[Dpto]
       ,[Nombre_Departamento]
       ,[Seccion]
       ,[Nombre_Seccion]
@@ -169,7 +187,7 @@ SELECT 1 AS FrontId, 'Pinares' AS FrontName  ,[Dpto]
       ,[duracionTotal]
       ,[RANGO]
   FROM [dbo].[V_Tiempos_Cocina]
-</DTS:VariableValue>
+  WHERE CONVERT( DATE,TicksPedido) &gt;='2021-01-01'</DTS:VariableValue>
     </DTS:Variable>
   </DTS:Variables>
   <DTS:Executables>
@@ -575,7 +593,7 @@ SELECT 1 AS FrontId, 'Pinares' AS FrontName  ,[Dpto]
                       refId="Package\DFT Destination\ODD Destination.Inputs[OLE DB Destination Input].Columns[FrontName]"
                       cachedCodepage="1252"
                       cachedDataType="str"
-                      cachedLength="7"
+                      cachedLength="42"
                       cachedName="FrontName"
                       externalMetadataColumnId="Package\DFT Destination\ODD Destination.Inputs[OLE DB Destination Input].ExternalColumns[FrontName]"
                       lineageId="Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[FrontName]" />
@@ -1099,7 +1117,7 @@ SELECT 1 AS FrontId, 'Pinares' AS FrontName  ,[Dpto]
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].ExternalColumns[FrontName]"
-                      length="7"
+                      length="42"
                       lineageId="Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[FrontName]"
                       name="FrontName"
                       truncationRowDisposition="FailComponent" />
@@ -1237,7 +1255,7 @@ SELECT 1 AS FrontId, 'Pinares' AS FrontName  ,[Dpto]
                       refId="Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].ExternalColumns[FrontName]"
                       codePage="1252"
                       dataType="str"
-                      length="7"
+                      length="42"
                       name="FrontName" />
                   </externalMetadataColumns>
                 </output>
@@ -1255,7 +1273,7 @@ SELECT 1 AS FrontId, 'Pinares' AS FrontName  ,[Dpto]
                       refId="Package\DFT Destination\ODS Source.Outputs[OLE DB Source Error Output].Columns[FrontName]"
                       codePage="1252"
                       dataType="str"
-                      length="7"
+                      length="42"
                       lineageId="Package\DFT Destination\ODS Source.Outputs[OLE DB Source Error Output].Columns[FrontName]"
                       name="FrontName" />
                     <outputColumn
@@ -1552,16 +1570,96 @@ SELECT 1 AS FrontId, 'Pinares' AS FrontName  ,[Dpto]
         </SQLTask:SqlTaskData>
       </DTS:ObjectData>
     </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Get Parameters"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{730BBFFD-16C5-4B1B-9B8D-496D3030E495}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Get Parameters"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:EventHandlers>
+        <DTS:EventHandler
+          DTS:refId="Package\Get Parameters.EventHandlers[OnError]"
+          DTS:CreationName="OnError"
+          DTS:DTSID="{C0807782-81AC-469C-AFAF-308A378DB2D8}"
+          DTS:EventID="0"
+          DTS:EventName="OnError"
+          DTS:LocaleID="-1">
+          <DTS:Variables>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:Description="The propagate property of the event"
+              DTS:DTSID="{0BD7A676-5F8D-43E1-A59B-3C7252C2A9D2}"
+              DTS:IncludeInDebugDump="6789"
+              DTS:Namespace="System"
+              DTS:ObjectName="Propagate">
+              <DTS:VariableValue
+                DTS:DataType="11">0</DTS:VariableValue>
+            </DTS:Variable>
+          </DTS:Variables>
+          <DTS:Executables>
+            <DTS:Executable
+              DTS:refId="Package\Get Parameters.EventHandlers[OnError]\Fail DFT"
+              DTS:CreationName="Microsoft.ExecuteSQLTask"
+              DTS:Description="Execute SQL Task"
+              DTS:DTSID="{3d9d1703-03cc-4a2c-b9c3-fdf8b36a4e84}"
+              DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="Fail DFT"
+              DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <SQLTask:SqlTaskData
+                  SQLTask:Connection="{19A7488B-263F-40F3-8A96-381897DB9D7E}"
+                  SQLTask:SqlStatementSource="EXEC dbo.ETLDataFlowStatus 3,?,?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+                  <SQLTask:ParameterBinding
+                    SQLTask:ParameterName="@ExecutePackage"
+                    SQLTask:DtsVariableName="$Package::ExecutePackage"
+                    SQLTask:ParameterDirection="Input"
+                    SQLTask:DataType="2"
+                    SQLTask:ParameterSize="1" />
+                  <SQLTask:ParameterBinding
+                    SQLTask:ParameterName="@RecordsTransferred"
+                    SQLTask:DtsVariableName="User::RecordTransferred"
+                    SQLTask:ParameterDirection="Input"
+                    SQLTask:DataType="3"
+                    SQLTask:ParameterSize="2" />
+                </SQLTask:SqlTaskData>
+              </DTS:ObjectData>
+            </DTS:Executable>
+          </DTS:Executables>
+        </DTS:EventHandler>
+      </DTS:EventHandlers>
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{19A7488B-263F-40F3-8A96-381897DB9D7E}"
+          SQLTask:SqlStatementSource="EXEC [dbo].[ETLGetParameters] ?"
+          SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="0"
+            SQLTask:DtsVariableName="User::DateProcess" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="@PackageId"
+            SQLTask:DtsVariableName="$Package::PackageId"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="3"
+            SQLTask:ParameterSize="0" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
   </DTS:Executables>
   <DTS:PrecedenceConstraints>
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
-      DTS:DTSID="{2FD1E737-3C18-403A-9558-AADBCEB44DD7}"
+      DTS:DTSID="{26465756-4CDF-403D-BDCE-BC9A11F63447}"
       DTS:From="Package\Begin"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
-      DTS:To="Package\DFT Destination" />
+      DTS:To="Package\Get Parameters" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
       DTS:CreationName=""
@@ -1570,6 +1668,14 @@ SELECT 1 AS FrontId, 'Pinares' AS FrontName  ,[Dpto]
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 1"
       DTS:To="Package\End" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{4A501412-1C54-4429-A1F2-855F577E5126}"
+      DTS:From="Package\Get Parameters"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\DFT Destination" />
   </DTS:PrecedenceConstraints>
   <DTS:EventHandlers>
     <DTS:EventHandler
@@ -1617,21 +1723,47 @@ SELECT 1 AS FrontId, 'Pinares' AS FrontName  ,[Dpto]
         <NodeLayout
           Size="120,42.6666666666667"
           Id="Package\End"
-          TopLeft="341.249994914979,376.789481849222" />
+          TopLeft="337.499994970858,305.631585773009" />
         <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="392.187496018596,92.6140360278546">
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="396.083328918865,250.719300486485">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,115.438597791964"
+              EndConnector="0,54.9122852865244"
               Start="0,0"
-              End="0,107.938597791964">
+              End="0,47.4122852865244">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,107.938597791964" />
+                    End="0,47.4122852865244" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="168,42.6666666666667"
+          Id="Package\Get Parameters"
+          TopLeft="311.249995362014,127.26316029015" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="392.479162266167,92.6140360278547">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,34.6491242622954"
+              Start="0,0"
+              End="0,27.1491242622954">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.1491242622954" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1641,19 +1773,19 @@ SELECT 1 AS FrontId, 'Pinares' AS FrontName  ,[Dpto]
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="397.958328890925,250.719300486485">
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="394.958329114442,169.929826956817">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,126.070181362737"
+              EndConnector="0,38.1228068630012"
               Start="0,0"
-              End="0,118.570181362737">
+              End="0,30.6228068630012">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,118.570181362737" />
+                    End="0,30.6228068630012" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1674,6 +1806,18 @@ SELECT 1 AS FrontId, 'Pinares' AS FrontName  ,[Dpto]
           Size="133.333333333334,42.6666666666667"
           Id="{4c6123ce-5222-48ac-9479-13fef1617402}"
           TopLeft="1024,159" />
+      </GraphLayout>
+    </LayoutInfo>
+  </DtsEventHandler>
+  <DtsEventHandler
+    design-time-name="Package\Begin.EventHandlers[OnError]">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="120,42.6666666666667"
+          Id="Package\Begin.EventHandlers[OnError]\Fail DFT"
+          TopLeft="893,112" />
       </GraphLayout>
     </LayoutInfo>
   </DtsEventHandler>
@@ -1741,6 +1885,18 @@ SELECT 1 AS FrontId, 'Pinares' AS FrontName  ,[Dpto]
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <DtsEventHandler
+    design-time-name="Package\DFT Destination.EventHandlers[OnError]">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="120,42.6666666666667"
+          Id="Package\DFT Destination.EventHandlers[OnError]\Fail DFT"
+          TopLeft="940,211" />
+      </GraphLayout>
+    </LayoutInfo>
+  </DtsEventHandler>
   <PipelineComponentMetadata
     design-time-name="Package\DFT Destination\ODS Source">
     <Properties>
@@ -1768,30 +1924,6 @@ SELECT 1 AS FrontId, 'Pinares' AS FrontName  ,[Dpto]
     </Properties>
   </PipelineComponentMetadata>
   <DtsEventHandler
-    design-time-name="Package\DFT Destination.EventHandlers[OnError]">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
-        <NodeLayout
-          Size="120,42.6666666666667"
-          Id="Package\DFT Destination.EventHandlers[OnError]\Fail DFT"
-          TopLeft="940,211" />
-      </GraphLayout>
-    </LayoutInfo>
-  </DtsEventHandler>
-  <DtsEventHandler
-    design-time-name="Package\Begin.EventHandlers[OnError]">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
-        <NodeLayout
-          Size="120,42.6666666666667"
-          Id="Package\Begin.EventHandlers[OnError]\Fail DFT"
-          TopLeft="893,112" />
-      </GraphLayout>
-    </LayoutInfo>
-  </DtsEventHandler>
-  <DtsEventHandler
     design-time-name="Package\End.EventHandlers[OnError]">
     <LayoutInfo>
       <GraphLayout
@@ -1799,7 +1931,19 @@ SELECT 1 AS FrontId, 'Pinares' AS FrontName  ,[Dpto]
         <NodeLayout
           Size="120,42.6666666666667"
           Id="Package\End.EventHandlers[OnError]\Fail DFT"
-          TopLeft="1016,218" />
+          TopLeft="1017,218" />
+      </GraphLayout>
+    </LayoutInfo>
+  </DtsEventHandler>
+  <DtsEventHandler
+    design-time-name="Package\Get Parameters.EventHandlers[OnError]">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="120,42.6666666666667"
+          Id="Package\Get Parameters.EventHandlers[OnError]\Fail DFT"
+          TopLeft="957,243" />
       </GraphLayout>
     </LayoutInfo>
   </DtsEventHandler>
