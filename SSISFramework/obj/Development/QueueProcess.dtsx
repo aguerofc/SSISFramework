@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="QueueProcess"
   DTS:PackageType="5"
-  DTS:VersionBuild="247"
-  DTS:VersionGUID="{B401B1C4-9444-4457-BE30-3F76A51BE514}">
+  DTS:VersionBuild="253"
+  DTS:VersionGUID="{09562FA8-5A39-4C69-AE17-167BA2054B1E}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -25,17 +25,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=DESKTOP-R6LFB3P;Initial Catalog=CookingTime;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-000_master-{6A1483C0-91FD-4F88-B3C3-C2B2A1286EE8}localhostDest;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Dummy]"
-      DTS:CreationName="FILE"
-      DTS:DTSID="{1d85d5cb-183e-48a3-8dcd-98f3cd1569f8}"
-      DTS:ObjectName="Dummy">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectionString="C:\Users\carlo\OneDrive\MyWork\Spoon\BaseDeDatos\SSIS\6078_SSIS_Framework2Level\SSIS_training\FlexFramework\Dummy.dtsx" />
+          DTS:ConnectionString="Data Source=DESKTOP-R6LFB3P;Initial Catalog=CookingTime;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-QueueProcess-{6A1483C0-91FD-4F88-B3C3-C2B2A1286EE8}Destination;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -47,7 +37,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=DESKTOP-R6LFB3P;Initial Catalog=ETLAdmin;File Name=C:\Users\carlo\OneDrive\Escritorio\ETLAdmin.udl;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-000_master-{19A7488B-263F-40F3-8A96-381897DB9D7E}localhost.ETLAdmin;" />
+          DTS:ConnectionString="Data Source=DESKTOP-R6LFB3P;Initial Catalog=ETLAdmin;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-QueueProcess-{19A7488B-263F-40F3-8A96-381897DB9D7E}ETLAdmin;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -59,7 +49,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=localhost;Initial Catalog=Source2;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Master-{098251C2-2254-4BA8-BAA8-EF78DFACCBD2}Source;" />
+          DTS:ConnectionString="Data Source=DESKTOP-R6LFB3P;Initial Catalog=Source2;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-QueueProcess-{098251C2-2254-4BA8-BAA8-EF78DFACCBD2}Source;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -286,7 +276,7 @@ WHERE ID= "  + (DT_WSTR, 5) @[User::ProcessId]</DTS:PropertyExpression>
           DTS:LocaleID="-1"
           DTS:ObjectName="EST Start Load"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="2">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -332,7 +322,7 @@ WHERE ID= "  + (DT_WSTR, 5) @[User::ProcessId]</DTS:PropertyExpression>
           DTS:LocaleID="-1"
           DTS:ObjectName="EST Stop Load"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="2">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -548,7 +538,7 @@ WHERE ID= "  + (DT_WSTR, 5) @[User::ProcessId]</DTS:PropertyExpression>
           DTS:LocaleID="-1"
           DTS:ObjectName="EST Start Load"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="2">
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -594,7 +584,7 @@ WHERE ID= "  + (DT_WSTR, 5) @[User::ProcessId]</DTS:PropertyExpression>
           DTS:LocaleID="-1"
           DTS:ObjectName="EST Stop Load"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="2">
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -1013,13 +1003,17 @@ WHERE ID= "  + (DT_WSTR, 5) @[User::ProcessId]</DTS:PropertyExpression>
           Id="Package\Clean Staging"
           TopLeft="279.166663127641,334.824554668017" />
         <NodeLayout
-          Size="145.333333333334,42.6666666666667"
-          Id="Package\Execute Load"
-          TopLeft="1439.70831404564,314.578952197883" />
+          Size="168,42.6666666666667"
+          Id="Package\EST Final"
+          TopLeft="1632.29164646628,313.263163715849" />
         <NodeLayout
           Size="149.333333333334,42"
           Id="Package\EST Initial"
           TopLeft="44.7916666201004,331.969298039557" />
+        <NodeLayout
+          Size="145.333333333334,42.6666666666667"
+          Id="Package\Execute Load"
+          TopLeft="1439.70831404564,314.578952197883" />
         <NodeLayout
           Size="152,42.6666666666667"
           Id="Package\FLC1\EST Start Load"
@@ -1435,10 +1429,6 @@ WHERE ID= "  + (DT_WSTR, 5) @[User::ProcessId]</DTS:PropertyExpression>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="168,42.6666666666667"
-          Id="Package\EST Final"
-          TopLeft="1632.29164646628,313.263163715849" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 7]"
           TopLeft="1585.04164737897,335.254391290199">

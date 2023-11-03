@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="DataFlow"
   DTS:PackageType="5"
-  DTS:VersionBuild="249"
-  DTS:VersionGUID="{04675071-5DE6-42F4-AFAD-6206941736CA}">
+  DTS:VersionBuild="286"
+  DTS:VersionGUID="{B972D8AC-B240-458C-ACF0-F0331CEB66D7}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -25,7 +25,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=DESKTOP-R6LFB3P;Initial Catalog=CookingTime;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-CreditCard-{C94014F5-88BC-4C11-8576-1B87AD2A9B71}localhostDest;" />
+          DTS:ConnectionString="Data Source=DESKTOP-R6LFB3P;Initial Catalog=CookingTime;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-DataFlow-{C94014F5-88BC-4C11-8576-1B87AD2A9B71}Destination;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -37,7 +37,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=DESKTOP-R6LFB3P;Initial Catalog=ETLAdmin;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-000_master-{19A7488B-263F-40F3-8A96-381897DB9D7E}localhost.ETLAdmin;" />
+          DTS:ConnectionString="Data Source=DESKTOP-R6LFB3P;Initial Catalog=ETLAdmin;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-DataFlow-{19A7488B-263F-40F3-8A96-381897DB9D7E}ETLAdmin;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -46,12 +46,12 @@
       DTS:DTSID="{8595A0CF-3106-4125-AE02-4C47F9C920B2}"
       DTS:ObjectName="Source">
       <DTS:PropertyExpression
-        DTS:Name="ConnectionString">"Data Source= " +   @[$Package::ServerName] + ";Provider=SQLNCLI11.1;Initial Catalog=" + @[$Package::DataBaseName] + ";Integrated Security=SSPI;"</DTS:PropertyExpression>
+        DTS:Name="ConnectionString">"Data Source= " +   @[$Package::ServerName] + ";Provider=MSOLEDBSQL.1;Initial Catalog=" + @[$Package::DataBaseName] + ";Integrated Security=SSPI;"</DTS:PropertyExpression>
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source= DESKTOP-R6LFB3P;Initial Catalog=Source1;Provider=SQLNCLI11.1;Integrated Security=SSPI;" />
+          DTS:ConnectionString="Data Source= DESKTOP-R6LFB3P;Initial Catalog=Source1;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -154,7 +154,7 @@
       DTS:CreationName=""
       DTS:DTSID="{CB028BC7-9E0C-4BB2-8C52-1B75EED0A562}"
       DTS:EvaluateAsExpression="True"
-      DTS:Expression="&quot;&#xA;SELECT &quot; + (DT_WSTR, 6) @[$Package::QueueCode]  +&quot; AS FrontId, '&quot; + @[$Package::QueueName]  + &quot;' AS FrontName  ,[Dpto]&#xA;      ,[Nombre_Departamento]&#xA;      ,[Seccion]&#xA;      ,[Nombre_Seccion]&#xA;      ,[Referencia]&#xA;      ,[NombreVendedor]&#xA;      ,[IdLineaPedido]&#xA;      ,[IdPedido]&#xA;      ,[IdArticulo]&#xA;      ,[Descripcion]&#xA;      ,[Orden]&#xA;      ,[Estado]&#xA;      ,[Unidades]&#xA;      ,[IsAnulada]&#xA;      ,[TicksPedido]&#xA;      ,[TicksAPreparar]&#xA;      ,[TicksInicioPreparacion]&#xA;      ,[TicksPreparado]&#xA;      ,[TicksServido]&#xA;      ,[duracionTotalSegundos]&#xA;      ,[dddDuraPedidoaPreparar]&#xA;      ,[dddDuraPrepararAIniciaPrep]&#xA;      ,[dddDuraIniciaPrepAPreparado]&#xA;      ,[dddDuraPreparadoaServido]&#xA;      ,[duracionTotal]&#xA;      ,[RANGO]&#xA;  FROM [dbo].[V_Tiempos_Cocina]&#xA;  WHERE CONVERT( DATE,TicksPedido) &gt;='&quot; +    @[User::DateProcess]    + &quot;'&quot;"
+      DTS:Expression="&quot;&#xA;SELECT &quot; + (DT_WSTR, 6) @[$Package::QueueCode]  +&quot; AS FrontId, '&quot; + @[$Package::QueueName]  + &quot;' AS FrontName  ,[Dpto]&#xA;      ,[Nombre_Departamento]&#xA;      ,[Seccion]&#xA;      ,[Nombre_Seccion]&#xA;      ,[Referencia]&#xA;      ,[NombreVendedor]&#xA;      ,[IdLineaPedido]&#xA;      ,[IdPedido]&#xA;      ,[IdArticulo]&#xA;      ,[Descripcion]&#xA;      ,[Orden]&#xA;      ,[Estado]&#xA;      ,[Unidades]&#xA;      ,[IsAnulada]&#xA;      ,[TicksPedido]&#xA;      ,[TicksAPreparar]&#xA;      ,[TicksInicioPreparacion]&#xA;      ,[TicksPreparado]&#xA;      ,[TicksServido]&#xA;      ,[duracionTotalSegundos]&#xA;      ,[dddDuraPedidoaPreparar]&#xA;      ,[dddDuraPrepararAIniciaPrep]&#xA;      ,[dddDuraIniciaPrepAPreparado]&#xA;      ,[dddDuraPreparadoaServido]&#xA;      ,[duracionTotal]&#xA;      ,[RANGO]&#xA;  FROM [dbo].[V_Tiempos_Cocina]&#xA;  WHERE CONVERT( DATE,TicksPedido) BETWEEN '&quot; +    @[User::DateProcess]    + &quot;' AND CONVERT(DATE, GETDATE()-1)&quot;"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="SQLStaging">
@@ -187,7 +187,7 @@ SELECT 1 AS FrontId, 'LoremIpsumDolorSitAmetConsecteturDipiscing' AS FrontName  
       ,[duracionTotal]
       ,[RANGO]
   FROM [dbo].[V_Tiempos_Cocina]
-  WHERE CONVERT( DATE,TicksPedido) &gt;='2021-01-01'</DTS:VariableValue>
+  WHERE CONVERT( DATE,TicksPedido) BETWEEN '2021-01-01' AND CONVERT(DATE, GETDATE()-1)</DTS:VariableValue>
     </DTS:Variable>
   </DTS:Variables>
   <DTS:Executables>
@@ -1697,7 +1697,37 @@ SELECT 1 AS FrontId, 'LoremIpsumDolorSitAmetConsecteturDipiscing' AS FrontName  
             DTS:DataType="11">0</DTS:VariableValue>
         </DTS:Variable>
       </DTS:Variables>
-      <DTS:Executables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package.EventHandlers[OnError]\Fail DFT"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{98211b1a-f34f-4bdd-95c7-8f1ffa08ca6e}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Fail DFT"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{19A7488B-263F-40F3-8A96-381897DB9D7E}"
+              SQLTask:SqlStatementSource="EXEC dbo.ETLDataFlowStatus 3,?,?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="@ExecutePackage"
+                SQLTask:DtsVariableName="$Package::ExecutePackage"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="2"
+                SQLTask:ParameterSize="1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="@RecordsTransferred"
+                SQLTask:DtsVariableName="User::RecordTransferred"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="2" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
     </DTS:EventHandler>
   </DTS:EventHandlers>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
@@ -1715,85 +1745,85 @@ SELECT 1 AS FrontId, 'LoremIpsumDolorSitAmetConsecteturDipiscing' AS FrontName  
         <NodeLayout
           Size="106.666666666667,42.6666666666667"
           Id="Package\Begin"
-          TopLeft="336.374995836987,49.947369361188" />
+          TopLeft="484.666667896011,142.17544166159" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="537.437500991858,184.842108328257">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,35.3333348014896"
+              Start="0,0"
+              End="0,27.8333348014896">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.8333348014896" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <NodeLayout
           Size="157.333333333334,42.6666666666667"
           Id="Package\DFT Destination"
-          TopLeft="315.999996200204,208.052633819818" />
+          TopLeft="464.291668259228,300.28070612022" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="539.916667840133,262.842109796413">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,37.438596323807"
+              Start="0,0"
+              End="0,29.938596323807">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.938596323807" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="544.375000977888,342.947372786887">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,55.5964958257187"
+              Start="0,0"
+              End="0,48.0964958257187">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,48.0964958257187" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <NodeLayout
           Size="120,42.6666666666667"
           Id="Package\End"
-          TopLeft="337.499994970858,305.631585773009" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="396.083328918865,250.719300486485">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,54.9122852865244"
-              Start="0,0"
-              End="0,47.4122852865244">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,47.4122852865244" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          TopLeft="485.791667029882,398.543868612605" />
         <NodeLayout
-          Size="168,42.6666666666667"
+          Size="154.666666666667,42.6666666666667"
           Id="Package\Get Parameters"
-          TopLeft="311.249995362014,127.26316029015" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="392.479162266167,92.6140360278547">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,34.6491242622954"
-              Start="0,0"
-              End="0,27.1491242622954">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,27.1491242622954" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="394.958329114442,169.929826956817">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,38.1228068630012"
-              Start="0,0"
-              End="0,30.6228068630012">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,30.6228068630012" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          TopLeft="459.541667421038,220.175443129746" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -1803,9 +1833,9 @@ SELECT 1 AS FrontId, 'LoremIpsumDolorSitAmetConsecteturDipiscing' AS FrontName  
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="133.333333333334,42.6666666666667"
-          Id="{4c6123ce-5222-48ac-9479-13fef1617402}"
-          TopLeft="1024,159" />
+          Size="120,42.6666666666667"
+          Id="Package.EventHandlers[OnError]\Fail DFT"
+          TopLeft="781.874989243224,104.473685047633" />
       </GraphLayout>
     </LayoutInfo>
   </DtsEventHandler>
@@ -1837,10 +1867,10 @@ SELECT 1 AS FrontId, 'LoremIpsumDolorSitAmetConsecteturDipiscing' AS FrontName  
         <NodeLayout
           Size="160,42.6666666666667"
           Id="Package\DFT Destination\ODD Destination"
-          TopLeft="92.7499999441206,294.105265192708" />
+          TopLeft="93.9999999254941,294.105265192708" />
         <EdgeLayout
           Id="Package\DFT Destination.Paths[Row Count Output 1]"
-          TopLeft="171.874999189749,193.87719582862">
+          TopLeft="172.499999180436,193.87719582862">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"

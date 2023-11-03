@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="QueuePackage"
   DTS:PackageType="5"
-  DTS:VersionBuild="357"
-  DTS:VersionGUID="{2AB31D92-E7CF-4DA0-A468-00C326FE3B4D}">
+  DTS:VersionBuild="363"
+  DTS:VersionGUID="{8FDA8840-8B90-419E-880D-D3D6A2CB2039}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -25,17 +25,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=localhost;Initial Catalog=Destination;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-000_master-{056C6988-F7E3-4B7B-B0DD-F9E7B13E32D8}localhostDest;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Dummy]"
-      DTS:CreationName="FILE"
-      DTS:DTSID="{4F5D1CE2-5A43-4DE0-9AB3-8EFD77742448}"
-      DTS:ObjectName="Dummy">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectionString="C:\Users\carlo\OneDrive\MyWork\Spoon\BaseDeDatos\SSIS\6078_SSIS_Framework2Level\SSIS_training\FlexFramework\Dummy.dtsx" />
+          DTS:ConnectionString="Data Source=DESKTOP-R6LFB3P;Initial Catalog=CookingTime;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-QueuePackage-{056C6988-F7E3-4B7B-B0DD-F9E7B13E32D8}Destination;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -47,7 +37,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=DESKTOP-R6LFB3P;Initial Catalog=ETLAdmin;File Name=C:\Users\carlo\OneDrive\Escritorio\ETLAdmin.udl;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-000_master-{9B92DAF8-307C-4EE0-8AFE-E9955DD0D42D}localhost.ETLAdmin;" />
+          DTS:ConnectionString="Data Source=DESKTOP-R6LFB3P;Initial Catalog=ETLAdmin;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-QueuePackage-{9B92DAF8-307C-4EE0-8AFE-E9955DD0D42D}ETLAdmin;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -59,7 +49,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=localhost;Initial Catalog=Source1;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Transfer-{B69CC013-B429-40BD-9924-2DFFD5AB869F}Source;" />
+          DTS:ConnectionString="Data Source=DESKTOP-R6LFB3P;Initial Catalog=Source1;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-QueuePackage-{B69CC013-B429-40BD-9924-2DFFD5AB869F}Source;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -245,7 +235,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="EST Start Load"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="2">
           <DTS:Variables />
           <DTS:LoggingOptions
             DTS:FilterKind="0"
@@ -273,6 +263,9 @@
               <SQLTask:ResultBinding
                 SQLTask:ResultName="5"
                 SQLTask:DtsVariableName="User::QueueName" />
+              <SQLTask:ResultBinding
+                SQLTask:ResultName="6"
+                SQLTask:DtsVariableName="User::PackageId" />
               <SQLTask:ParameterBinding
                 SQLTask:ParameterName="@Level"
                 SQLTask:DtsVariableName="User::Level"
@@ -309,7 +302,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="EST Stop Load"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="2">
           <DTS:Variables />
           <DTS:LoggingOptions
             DTS:FilterKind="0"
@@ -563,7 +556,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="EST Start Load"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="2">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:LoggingOptions
             DTS:FilterKind="0"
@@ -591,6 +584,9 @@
               <SQLTask:ResultBinding
                 SQLTask:ResultName="5"
                 SQLTask:DtsVariableName="User::QueueName" />
+              <SQLTask:ResultBinding
+                SQLTask:ResultName="6"
+                SQLTask:DtsVariableName="User::PackageId" />
               <SQLTask:ParameterBinding
                 SQLTask:ParameterName="@Level"
                 SQLTask:DtsVariableName="User::Level"
@@ -627,7 +623,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="EST Stop Load"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="2">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:LoggingOptions
             DTS:FilterKind="0"
@@ -1126,6 +1122,9 @@
               <SQLTask:ResultBinding
                 SQLTask:ResultName="5"
                 SQLTask:DtsVariableName="User::QueueName" />
+              <SQLTask:ResultBinding
+                SQLTask:ResultName="6"
+                SQLTask:DtsVariableName="User::PackageId" />
               <SQLTask:ParameterBinding
                 SQLTask:ParameterName="@Level"
                 SQLTask:DtsVariableName="User::Level"
@@ -1380,7 +1379,7 @@
           TopLeft="268,37.6842105391944" />
         <EdgeLayout
           Id="Package\FLC1.PrecedenceConstraints[Constraint]"
-          TopLeft="183.333333333333,60.903508823444">
+          TopLeft="183.333333333333,60.9035088234441">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -1430,7 +1429,7 @@
           HeaderHeight="43"
           IsExpanded="True"
           PanelSize="730.666666666667,266.666666666667"
-          Size="730.666666666667,309.333333333334"
+          Size="730.666666666667,310"
           Id="Package\FLC1"
           TopLeft="543.333328341445,58.4210534300501" />
         <NodeLayout
