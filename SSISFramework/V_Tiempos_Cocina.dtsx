@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="DataFlow"
   DTS:PackageType="5"
-  DTS:VersionBuild="286"
-  DTS:VersionGUID="{B972D8AC-B240-458C-ACF0-F0331CEB66D7}">
+  DTS:VersionBuild="290"
+  DTS:VersionGUID="{D1B39464-6BC8-4805-8BCD-94D8CFD75256}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
