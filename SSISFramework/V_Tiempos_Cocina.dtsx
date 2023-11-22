@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="DataFlow"
   DTS:PackageType="5"
-  DTS:VersionBuild="290"
-  DTS:VersionGUID="{D1B39464-6BC8-4805-8BCD-94D8CFD75256}">
+  DTS:VersionBuild="293"
+  DTS:VersionGUID="{9D63CEF7-1FB9-4BDE-8B74-B94D67237D4E}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -413,78 +413,79 @@ SELECT 1 AS FrontId, 'LoremIpsumDolorSitAmetConsecteturDipiscing' AS FrontName  
                       cachedDataType="i4"
                       cachedName="Dpto"
                       externalMetadataColumnId="Package\DFT Destination\ODD Destination.Inputs[OLE DB Destination Input].ExternalColumns[DepartmentID]"
-                      lineageId="Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[Dpto]" />
+                      lineageId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[Dpto]" />
                     <inputColumn
                       refId="Package\DFT Destination\ODD Destination.Inputs[OLE DB Destination Input].Columns[Nombre_Departamento]"
                       cachedDataType="wstr"
                       cachedLength="25"
                       cachedName="Nombre_Departamento"
                       externalMetadataColumnId="Package\DFT Destination\ODD Destination.Inputs[OLE DB Destination Input].ExternalColumns[DepartmentName]"
-                      lineageId="Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[Nombre_Departamento]" />
+                      lineageId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[Nombre_Departamento]" />
                     <inputColumn
                       refId="Package\DFT Destination\ODD Destination.Inputs[OLE DB Destination Input].Columns[Seccion]"
                       cachedDataType="i4"
                       cachedName="Seccion"
                       externalMetadataColumnId="Package\DFT Destination\ODD Destination.Inputs[OLE DB Destination Input].ExternalColumns[SectionID]"
-                      lineageId="Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[Seccion]" />
+                      lineageId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[Seccion]" />
                     <inputColumn
                       refId="Package\DFT Destination\ODD Destination.Inputs[OLE DB Destination Input].Columns[Nombre_Seccion]"
                       cachedDataType="wstr"
                       cachedLength="30"
                       cachedName="Nombre_Seccion"
                       externalMetadataColumnId="Package\DFT Destination\ODD Destination.Inputs[OLE DB Destination Input].ExternalColumns[SectionName]"
-                      lineageId="Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[Nombre_Seccion]" />
+                      lineageId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[Nombre_Seccion]" />
                     <inputColumn
                       refId="Package\DFT Destination\ODD Destination.Inputs[OLE DB Destination Input].Columns[Referencia]"
                       cachedDataType="wstr"
                       cachedLength="15"
                       cachedName="Referencia"
                       externalMetadataColumnId="Package\DFT Destination\ODD Destination.Inputs[OLE DB Destination Input].ExternalColumns[Reference]"
-                      lineageId="Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[Referencia]" />
+                      lineageId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[Referencia]" />
                     <inputColumn
                       refId="Package\DFT Destination\ODD Destination.Inputs[OLE DB Destination Input].Columns[NombreVendedor]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="NombreVendedor"
                       externalMetadataColumnId="Package\DFT Destination\ODD Destination.Inputs[OLE DB Destination Input].ExternalColumns[Seller]"
-                      lineageId="Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[NombreVendedor]" />
+                      lineageId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[NombreVendedor]" />
                     <inputColumn
                       refId="Package\DFT Destination\ODD Destination.Inputs[OLE DB Destination Input].Columns[IdLineaPedido]"
                       cachedDataType="i8"
                       cachedName="IdLineaPedido"
+                      cachedSortKeyPosition="1"
                       externalMetadataColumnId="Package\DFT Destination\ODD Destination.Inputs[OLE DB Destination Input].ExternalColumns[OrderLineID]"
-                      lineageId="Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[IdLineaPedido]" />
+                      lineageId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[IdLineaPedido]" />
                     <inputColumn
                       refId="Package\DFT Destination\ODD Destination.Inputs[OLE DB Destination Input].Columns[IdPedido]"
                       cachedDataType="i8"
                       cachedName="IdPedido"
                       externalMetadataColumnId="Package\DFT Destination\ODD Destination.Inputs[OLE DB Destination Input].ExternalColumns[OrderID]"
-                      lineageId="Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[IdPedido]" />
+                      lineageId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[IdPedido]" />
                     <inputColumn
                       refId="Package\DFT Destination\ODD Destination.Inputs[OLE DB Destination Input].Columns[IdArticulo]"
                       cachedDataType="i8"
                       cachedName="IdArticulo"
                       externalMetadataColumnId="Package\DFT Destination\ODD Destination.Inputs[OLE DB Destination Input].ExternalColumns[ItemID]"
-                      lineageId="Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[IdArticulo]" />
+                      lineageId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[IdArticulo]" />
                     <inputColumn
                       refId="Package\DFT Destination\ODD Destination.Inputs[OLE DB Destination Input].Columns[Descripcion]"
                       cachedDataType="wstr"
                       cachedLength="80"
                       cachedName="Descripcion"
                       externalMetadataColumnId="Package\DFT Destination\ODD Destination.Inputs[OLE DB Destination Input].ExternalColumns[ItemDescription]"
-                      lineageId="Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[Descripcion]" />
+                      lineageId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[Descripcion]" />
                     <inputColumn
                       refId="Package\DFT Destination\ODD Destination.Inputs[OLE DB Destination Input].Columns[Orden]"
                       cachedDataType="i4"
                       cachedName="Orden"
                       externalMetadataColumnId="Package\DFT Destination\ODD Destination.Inputs[OLE DB Destination Input].ExternalColumns[Order]"
-                      lineageId="Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[Orden]" />
+                      lineageId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[Orden]" />
                     <inputColumn
                       refId="Package\DFT Destination\ODD Destination.Inputs[OLE DB Destination Input].Columns[Estado]"
                       cachedDataType="i4"
                       cachedName="Estado"
                       externalMetadataColumnId="Package\DFT Destination\ODD Destination.Inputs[OLE DB Destination Input].ExternalColumns[Status]"
-                      lineageId="Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[Estado]" />
+                      lineageId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[Estado]" />
                     <inputColumn
                       refId="Package\DFT Destination\ODD Destination.Inputs[OLE DB Destination Input].Columns[Unidades]"
                       cachedDataType="numeric"
@@ -492,49 +493,49 @@ SELECT 1 AS FrontId, 'LoremIpsumDolorSitAmetConsecteturDipiscing' AS FrontName  
                       cachedPrecision="14"
                       cachedScale="4"
                       externalMetadataColumnId="Package\DFT Destination\ODD Destination.Inputs[OLE DB Destination Input].ExternalColumns[Units]"
-                      lineageId="Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[Unidades]" />
+                      lineageId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[Unidades]" />
                     <inputColumn
                       refId="Package\DFT Destination\ODD Destination.Inputs[OLE DB Destination Input].Columns[IsAnulada]"
                       cachedDataType="bool"
                       cachedName="IsAnulada"
                       externalMetadataColumnId="Package\DFT Destination\ODD Destination.Inputs[OLE DB Destination Input].ExternalColumns[IsCanceled]"
-                      lineageId="Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[IsAnulada]" />
+                      lineageId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[IsAnulada]" />
                     <inputColumn
                       refId="Package\DFT Destination\ODD Destination.Inputs[OLE DB Destination Input].Columns[TicksPedido]"
                       cachedDataType="dbTimeStamp"
                       cachedName="TicksPedido"
                       externalMetadataColumnId="Package\DFT Destination\ODD Destination.Inputs[OLE DB Destination Input].ExternalColumns[TimeToOrder]"
-                      lineageId="Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[TicksPedido]" />
+                      lineageId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[TicksPedido]" />
                     <inputColumn
                       refId="Package\DFT Destination\ODD Destination.Inputs[OLE DB Destination Input].Columns[TicksAPreparar]"
                       cachedDataType="dbTimeStamp"
                       cachedName="TicksAPreparar"
                       externalMetadataColumnId="Package\DFT Destination\ODD Destination.Inputs[OLE DB Destination Input].ExternalColumns[TimeToPrepare]"
-                      lineageId="Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[TicksAPreparar]" />
+                      lineageId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[TicksAPreparar]" />
                     <inputColumn
                       refId="Package\DFT Destination\ODD Destination.Inputs[OLE DB Destination Input].Columns[TicksInicioPreparacion]"
                       cachedDataType="dbTimeStamp"
                       cachedName="TicksInicioPreparacion"
                       externalMetadataColumnId="Package\DFT Destination\ODD Destination.Inputs[OLE DB Destination Input].ExternalColumns[TimeToBegin]"
-                      lineageId="Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[TicksInicioPreparacion]" />
+                      lineageId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[TicksInicioPreparacion]" />
                     <inputColumn
                       refId="Package\DFT Destination\ODD Destination.Inputs[OLE DB Destination Input].Columns[TicksPreparado]"
                       cachedDataType="dbTimeStamp"
                       cachedName="TicksPreparado"
                       externalMetadataColumnId="Package\DFT Destination\ODD Destination.Inputs[OLE DB Destination Input].ExternalColumns[TimeToFinished]"
-                      lineageId="Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[TicksPreparado]" />
+                      lineageId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[TicksPreparado]" />
                     <inputColumn
                       refId="Package\DFT Destination\ODD Destination.Inputs[OLE DB Destination Input].Columns[TicksServido]"
                       cachedDataType="dbTimeStamp"
                       cachedName="TicksServido"
                       externalMetadataColumnId="Package\DFT Destination\ODD Destination.Inputs[OLE DB Destination Input].ExternalColumns[TimeToServed]"
-                      lineageId="Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[TicksServido]" />
+                      lineageId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[TicksServido]" />
                     <inputColumn
                       refId="Package\DFT Destination\ODD Destination.Inputs[OLE DB Destination Input].Columns[duracionTotalSegundos]"
                       cachedDataType="i4"
                       cachedName="duracionTotalSegundos"
                       externalMetadataColumnId="Package\DFT Destination\ODD Destination.Inputs[OLE DB Destination Input].ExternalColumns[TimeElapsed]"
-                      lineageId="Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[duracionTotalSegundos]" />
+                      lineageId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[duracionTotalSegundos]" />
                     <inputColumn
                       refId="Package\DFT Destination\ODD Destination.Inputs[OLE DB Destination Input].Columns[dddDuraPedidoaPreparar]"
                       cachedCodepage="1252"
@@ -542,7 +543,7 @@ SELECT 1 AS FrontId, 'LoremIpsumDolorSitAmetConsecteturDipiscing' AS FrontName  
                       cachedLength="8"
                       cachedName="dddDuraPedidoaPreparar"
                       externalMetadataColumnId="Package\DFT Destination\ODD Destination.Inputs[OLE DB Destination Input].ExternalColumns[TimeElapsedOrderToPrepare]"
-                      lineageId="Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[dddDuraPedidoaPreparar]" />
+                      lineageId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[dddDuraPedidoaPreparar]" />
                     <inputColumn
                       refId="Package\DFT Destination\ODD Destination.Inputs[OLE DB Destination Input].Columns[dddDuraPrepararAIniciaPrep]"
                       cachedCodepage="1252"
@@ -550,7 +551,7 @@ SELECT 1 AS FrontId, 'LoremIpsumDolorSitAmetConsecteturDipiscing' AS FrontName  
                       cachedLength="8"
                       cachedName="dddDuraPrepararAIniciaPrep"
                       externalMetadataColumnId="Package\DFT Destination\ODD Destination.Inputs[OLE DB Destination Input].ExternalColumns[TimeElapsedPrepareToBegin]"
-                      lineageId="Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[dddDuraPrepararAIniciaPrep]" />
+                      lineageId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[dddDuraPrepararAIniciaPrep]" />
                     <inputColumn
                       refId="Package\DFT Destination\ODD Destination.Inputs[OLE DB Destination Input].Columns[dddDuraIniciaPrepAPreparado]"
                       cachedCodepage="1252"
@@ -558,7 +559,7 @@ SELECT 1 AS FrontId, 'LoremIpsumDolorSitAmetConsecteturDipiscing' AS FrontName  
                       cachedLength="8"
                       cachedName="dddDuraIniciaPrepAPreparado"
                       externalMetadataColumnId="Package\DFT Destination\ODD Destination.Inputs[OLE DB Destination Input].ExternalColumns[TimeElapsedBeginToFinished]"
-                      lineageId="Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[dddDuraIniciaPrepAPreparado]" />
+                      lineageId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[dddDuraIniciaPrepAPreparado]" />
                     <inputColumn
                       refId="Package\DFT Destination\ODD Destination.Inputs[OLE DB Destination Input].Columns[dddDuraPreparadoaServido]"
                       cachedCodepage="1252"
@@ -566,7 +567,7 @@ SELECT 1 AS FrontId, 'LoremIpsumDolorSitAmetConsecteturDipiscing' AS FrontName  
                       cachedLength="8"
                       cachedName="dddDuraPreparadoaServido"
                       externalMetadataColumnId="Package\DFT Destination\ODD Destination.Inputs[OLE DB Destination Input].ExternalColumns[TimeElapsedFinishedToServed]"
-                      lineageId="Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[dddDuraPreparadoaServido]" />
+                      lineageId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[dddDuraPreparadoaServido]" />
                     <inputColumn
                       refId="Package\DFT Destination\ODD Destination.Inputs[OLE DB Destination Input].Columns[duracionTotal]"
                       cachedCodepage="1252"
@@ -574,7 +575,7 @@ SELECT 1 AS FrontId, 'LoremIpsumDolorSitAmetConsecteturDipiscing' AS FrontName  
                       cachedLength="8"
                       cachedName="duracionTotal"
                       externalMetadataColumnId="Package\DFT Destination\ODD Destination.Inputs[OLE DB Destination Input].ExternalColumns[TimeTotal]"
-                      lineageId="Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[duracionTotal]" />
+                      lineageId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[duracionTotal]" />
                     <inputColumn
                       refId="Package\DFT Destination\ODD Destination.Inputs[OLE DB Destination Input].Columns[RANGO]"
                       cachedCodepage="1252"
@@ -582,13 +583,14 @@ SELECT 1 AS FrontId, 'LoremIpsumDolorSitAmetConsecteturDipiscing' AS FrontName  
                       cachedLength="12"
                       cachedName="RANGO"
                       externalMetadataColumnId="Package\DFT Destination\ODD Destination.Inputs[OLE DB Destination Input].ExternalColumns[Alert]"
-                      lineageId="Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[RANGO]" />
+                      lineageId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[RANGO]" />
                     <inputColumn
                       refId="Package\DFT Destination\ODD Destination.Inputs[OLE DB Destination Input].Columns[FrontId]"
                       cachedDataType="i4"
                       cachedName="FrontId"
+                      cachedSortKeyPosition="2"
                       externalMetadataColumnId="Package\DFT Destination\ODD Destination.Inputs[OLE DB Destination Input].ExternalColumns[FrontId]"
-                      lineageId="Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[FrontId]" />
+                      lineageId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[FrontId]" />
                     <inputColumn
                       refId="Package\DFT Destination\ODD Destination.Inputs[OLE DB Destination Input].Columns[FrontName]"
                       cachedCodepage="1252"
@@ -596,7 +598,7 @@ SELECT 1 AS FrontId, 'LoremIpsumDolorSitAmetConsecteturDipiscing' AS FrontName  
                       cachedLength="42"
                       cachedName="FrontName"
                       externalMetadataColumnId="Package\DFT Destination\ODD Destination.Inputs[OLE DB Destination Input].ExternalColumns[FrontName]"
-                      lineageId="Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[FrontName]" />
+                      lineageId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[FrontName]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1471,11 +1473,905 @@ SELECT 1 AS FrontId, 'LoremIpsumDolorSitAmetConsecteturDipiscing' AS FrontName  
                 </output>
               </outputs>
             </component>
+            <component
+              refId="Package\DFT Destination\Sort"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\DFT Destination\Sort.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT Destination\Sort.Inputs[Sort Input].Columns[Dpto]"
+                      cachedDataType="i4"
+                      cachedName="Dpto"
+                      lineageId="Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[Dpto]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT Destination\Sort.Inputs[Sort Input].Columns[Nombre_Departamento]"
+                      cachedDataType="wstr"
+                      cachedLength="25"
+                      cachedName="Nombre_Departamento"
+                      lineageId="Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[Nombre_Departamento]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT Destination\Sort.Inputs[Sort Input].Columns[Seccion]"
+                      cachedDataType="i4"
+                      cachedName="Seccion"
+                      lineageId="Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[Seccion]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT Destination\Sort.Inputs[Sort Input].Columns[Nombre_Seccion]"
+                      cachedDataType="wstr"
+                      cachedLength="30"
+                      cachedName="Nombre_Seccion"
+                      lineageId="Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[Nombre_Seccion]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT Destination\Sort.Inputs[Sort Input].Columns[Referencia]"
+                      cachedDataType="wstr"
+                      cachedLength="15"
+                      cachedName="Referencia"
+                      lineageId="Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[Referencia]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT Destination\Sort.Inputs[Sort Input].Columns[NombreVendedor]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="NombreVendedor"
+                      lineageId="Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[NombreVendedor]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT Destination\Sort.Inputs[Sort Input].Columns[IdLineaPedido]"
+                      cachedDataType="i8"
+                      cachedName="IdLineaPedido"
+                      lineageId="Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[IdLineaPedido]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT Destination\Sort.Inputs[Sort Input].Columns[IdPedido]"
+                      cachedDataType="i8"
+                      cachedName="IdPedido"
+                      lineageId="Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[IdPedido]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT Destination\Sort.Inputs[Sort Input].Columns[IdArticulo]"
+                      cachedDataType="i8"
+                      cachedName="IdArticulo"
+                      lineageId="Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[IdArticulo]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT Destination\Sort.Inputs[Sort Input].Columns[Descripcion]"
+                      cachedDataType="wstr"
+                      cachedLength="80"
+                      cachedName="Descripcion"
+                      lineageId="Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[Descripcion]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT Destination\Sort.Inputs[Sort Input].Columns[Orden]"
+                      cachedDataType="i4"
+                      cachedName="Orden"
+                      lineageId="Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[Orden]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT Destination\Sort.Inputs[Sort Input].Columns[Estado]"
+                      cachedDataType="i4"
+                      cachedName="Estado"
+                      lineageId="Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[Estado]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT Destination\Sort.Inputs[Sort Input].Columns[Unidades]"
+                      cachedDataType="numeric"
+                      cachedName="Unidades"
+                      cachedPrecision="14"
+                      cachedScale="4"
+                      lineageId="Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[Unidades]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT Destination\Sort.Inputs[Sort Input].Columns[IsAnulada]"
+                      cachedDataType="bool"
+                      cachedName="IsAnulada"
+                      lineageId="Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[IsAnulada]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT Destination\Sort.Inputs[Sort Input].Columns[TicksPedido]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="TicksPedido"
+                      lineageId="Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[TicksPedido]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT Destination\Sort.Inputs[Sort Input].Columns[TicksAPreparar]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="TicksAPreparar"
+                      lineageId="Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[TicksAPreparar]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT Destination\Sort.Inputs[Sort Input].Columns[TicksInicioPreparacion]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="TicksInicioPreparacion"
+                      lineageId="Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[TicksInicioPreparacion]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT Destination\Sort.Inputs[Sort Input].Columns[TicksPreparado]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="TicksPreparado"
+                      lineageId="Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[TicksPreparado]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT Destination\Sort.Inputs[Sort Input].Columns[TicksServido]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="TicksServido"
+                      lineageId="Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[TicksServido]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT Destination\Sort.Inputs[Sort Input].Columns[duracionTotalSegundos]"
+                      cachedDataType="i4"
+                      cachedName="duracionTotalSegundos"
+                      lineageId="Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[duracionTotalSegundos]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT Destination\Sort.Inputs[Sort Input].Columns[dddDuraPedidoaPreparar]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="8"
+                      cachedName="dddDuraPedidoaPreparar"
+                      lineageId="Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[dddDuraPedidoaPreparar]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT Destination\Sort.Inputs[Sort Input].Columns[dddDuraPrepararAIniciaPrep]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="8"
+                      cachedName="dddDuraPrepararAIniciaPrep"
+                      lineageId="Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[dddDuraPrepararAIniciaPrep]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT Destination\Sort.Inputs[Sort Input].Columns[dddDuraIniciaPrepAPreparado]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="8"
+                      cachedName="dddDuraIniciaPrepAPreparado"
+                      lineageId="Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[dddDuraIniciaPrepAPreparado]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT Destination\Sort.Inputs[Sort Input].Columns[dddDuraPreparadoaServido]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="8"
+                      cachedName="dddDuraPreparadoaServido"
+                      lineageId="Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[dddDuraPreparadoaServido]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT Destination\Sort.Inputs[Sort Input].Columns[duracionTotal]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="8"
+                      cachedName="duracionTotal"
+                      lineageId="Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[duracionTotal]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT Destination\Sort.Inputs[Sort Input].Columns[RANGO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="12"
+                      cachedName="RANGO"
+                      lineageId="Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[RANGO]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT Destination\Sort.Inputs[Sort Input].Columns[FrontId]"
+                      cachedDataType="i4"
+                      cachedName="FrontId"
+                      lineageId="Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[FrontId]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">2</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT Destination\Sort.Inputs[Sort Input].Columns[FrontName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="42"
+                      cachedName="FrontName"
+                      lineageId="Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[FrontName]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT Destination\Sort.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[Dpto]"
+                      dataType="i4"
+                      lineageId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[Dpto]"
+                      name="Dpto">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[Dpto]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[Nombre_Departamento]"
+                      dataType="wstr"
+                      length="25"
+                      lineageId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[Nombre_Departamento]"
+                      name="Nombre_Departamento">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[Nombre_Departamento]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[Seccion]"
+                      dataType="i4"
+                      lineageId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[Seccion]"
+                      name="Seccion">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[Seccion]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[Nombre_Seccion]"
+                      dataType="wstr"
+                      length="30"
+                      lineageId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[Nombre_Seccion]"
+                      name="Nombre_Seccion">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[Nombre_Seccion]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[Referencia]"
+                      dataType="wstr"
+                      length="15"
+                      lineageId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[Referencia]"
+                      name="Referencia">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[Referencia]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[NombreVendedor]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[NombreVendedor]"
+                      name="NombreVendedor">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[NombreVendedor]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[IdLineaPedido]"
+                      dataType="i8"
+                      lineageId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[IdLineaPedido]"
+                      name="IdLineaPedido"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[IdLineaPedido]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[IdPedido]"
+                      dataType="i8"
+                      lineageId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[IdPedido]"
+                      name="IdPedido">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[IdPedido]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[IdArticulo]"
+                      dataType="i8"
+                      lineageId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[IdArticulo]"
+                      name="IdArticulo">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[IdArticulo]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[Descripcion]"
+                      dataType="wstr"
+                      length="80"
+                      lineageId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[Descripcion]"
+                      name="Descripcion">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[Descripcion]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[Orden]"
+                      dataType="i4"
+                      lineageId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[Orden]"
+                      name="Orden">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[Orden]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[Estado]"
+                      dataType="i4"
+                      lineageId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[Estado]"
+                      name="Estado">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[Estado]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[Unidades]"
+                      dataType="numeric"
+                      lineageId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[Unidades]"
+                      name="Unidades"
+                      precision="14"
+                      scale="4">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[Unidades]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[IsAnulada]"
+                      dataType="bool"
+                      lineageId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[IsAnulada]"
+                      name="IsAnulada">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[IsAnulada]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[TicksPedido]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[TicksPedido]"
+                      name="TicksPedido">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[TicksPedido]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[TicksAPreparar]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[TicksAPreparar]"
+                      name="TicksAPreparar">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[TicksAPreparar]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[TicksInicioPreparacion]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[TicksInicioPreparacion]"
+                      name="TicksInicioPreparacion">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[TicksInicioPreparacion]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[TicksPreparado]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[TicksPreparado]"
+                      name="TicksPreparado">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[TicksPreparado]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[TicksServido]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[TicksServido]"
+                      name="TicksServido">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[TicksServido]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[duracionTotalSegundos]"
+                      dataType="i4"
+                      lineageId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[duracionTotalSegundos]"
+                      name="duracionTotalSegundos">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[duracionTotalSegundos]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[dddDuraPedidoaPreparar]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      lineageId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[dddDuraPedidoaPreparar]"
+                      name="dddDuraPedidoaPreparar">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[dddDuraPedidoaPreparar]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[dddDuraPrepararAIniciaPrep]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      lineageId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[dddDuraPrepararAIniciaPrep]"
+                      name="dddDuraPrepararAIniciaPrep">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[dddDuraPrepararAIniciaPrep]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[dddDuraIniciaPrepAPreparado]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      lineageId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[dddDuraIniciaPrepAPreparado]"
+                      name="dddDuraIniciaPrepAPreparado">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[dddDuraIniciaPrepAPreparado]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[dddDuraPreparadoaServido]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      lineageId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[dddDuraPreparadoaServido]"
+                      name="dddDuraPreparadoaServido">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[dddDuraPreparadoaServido]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[duracionTotal]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      lineageId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[duracionTotal]"
+                      name="duracionTotal">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[duracionTotal]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[RANGO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="12"
+                      lineageId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[RANGO]"
+                      name="RANGO">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[RANGO]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[FrontId]"
+                      dataType="i4"
+                      lineageId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[FrontId]"
+                      name="FrontId"
+                      sortKeyPosition="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[FrontId]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[FrontName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="42"
+                      lineageId="Package\DFT Destination\Sort.Outputs[Sort Output].Columns[FrontName]"
+                      name="FrontName">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output].Columns[FrontName]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
           </components>
           <paths>
             <path
               refId="Package\DFT Destination.Paths[OLE DB Source Output]"
-              endId="Package\DFT Destination\Row Count.Inputs[Row Count Input 1]"
+              endId="Package\DFT Destination\Sort.Inputs[Sort Input]"
               name="OLE DB Source Output"
               startId="Package\DFT Destination\ODS Source.Outputs[OLE DB Source Output]" />
             <path
@@ -1483,6 +2379,11 @@ SELECT 1 AS FrontId, 'LoremIpsumDolorSitAmetConsecteturDipiscing' AS FrontName  
               endId="Package\DFT Destination\ODD Destination.Inputs[OLE DB Destination Input]"
               name="Row Count Output 1"
               startId="Package\DFT Destination\Row Count.Outputs[Row Count Output 1]" />
+            <path
+              refId="Package\DFT Destination.Paths[Sort Output]"
+              endId="Package\DFT Destination\Row Count.Inputs[Row Count Input 1]"
+              name="Sort Output"
+              startId="Package\DFT Destination\Sort.Outputs[Sort Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -1746,6 +2647,18 @@ SELECT 1 AS FrontId, 'LoremIpsumDolorSitAmetConsecteturDipiscing' AS FrontName  
           Size="106.666666666667,42.6666666666667"
           Id="Package\Begin"
           TopLeft="484.666667896011,142.17544166159" />
+        <NodeLayout
+          Size="157.333333333334,42.6666666666667"
+          Id="Package\DFT Destination"
+          TopLeft="464.291668259228,300.28070612022" />
+        <NodeLayout
+          Size="120,42.6666666666667"
+          Id="Package\End"
+          TopLeft="485.791667029882,398.543868612605" />
+        <NodeLayout
+          Size="154.666666666667,42.6666666666667"
+          Id="Package\Get Parameters"
+          TopLeft="459.541667421038,220.175443129746" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="537.437500991858,184.842108328257">
@@ -1760,32 +2673,6 @@ SELECT 1 AS FrontId, 'LoremIpsumDolorSitAmetConsecteturDipiscing' AS FrontName  
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,27.8333348014896" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="157.333333333334,42.6666666666667"
-          Id="Package\DFT Destination"
-          TopLeft="464.291668259228,300.28070612022" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="539.916667840133,262.842109796413">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,37.438596323807"
-              Start="0,0"
-              End="0,29.938596323807">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,29.938596323807" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1816,14 +2703,28 @@ SELECT 1 AS FrontId, 'LoremIpsumDolorSitAmetConsecteturDipiscing' AS FrontName  
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="120,42.6666666666667"
-          Id="Package\End"
-          TopLeft="485.791667029882,398.543868612605" />
-        <NodeLayout
-          Size="154.666666666667,42.6666666666667"
-          Id="Package\Get Parameters"
-          TopLeft="459.541667421038,220.175443129746" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="539.916667840133,262.842109796413">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,37.438596323807"
+              Start="0,0"
+              End="0,29.938596323807">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.938596323807" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -1859,7 +2760,7 @@ SELECT 1 AS FrontId, 'LoremIpsumDolorSitAmetConsecteturDipiscing' AS FrontName  
         <NodeLayout
           Size="132,42.6666666666667"
           Id="Package\DFT Destination\Row Count"
-          TopLeft="104.999998435378,151.210529161953" />
+          TopLeft="99.9999985098838,307.89474263746" />
         <NodeLayout
           Size="140,42.6666666666667"
           Id="Package\DFT Destination\ODS Source"
@@ -1867,21 +2768,25 @@ SELECT 1 AS FrontId, 'LoremIpsumDolorSitAmetConsecteturDipiscing' AS FrontName  
         <NodeLayout
           Size="160,42.6666666666667"
           Id="Package\DFT Destination\ODD Destination"
-          TopLeft="93.9999999254941,294.105265192708" />
+          TopLeft="80.8750001210718,449.421057589827" />
+        <NodeLayout
+          Size="98.6666666666667,42.6666666666667"
+          Id="Package\DFT Destination\Sort"
+          TopLeft="112.499998323619,177.210529651338" />
         <EdgeLayout
-          Id="Package\DFT Destination.Paths[Row Count Output 1]"
-          TopLeft="172.499999180436,193.87719582862">
+          Id="Package\DFT Destination.Paths[OLE DB Source Output]"
+          TopLeft="164.729165749314,80.929823775811">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,100.228069364088"
+              EndConnector="0,96.2807058755272"
               Start="0,0"
-              End="0,92.7280693640883">
+              End="0,88.7807058755272">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,92.7280693640883" />
+                    End="0,88.7807058755272" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1891,19 +2796,41 @@ SELECT 1 AS FrontId, 'LoremIpsumDolorSitAmetConsecteturDipiscing' AS FrontName  
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DFT Destination.Paths[OLE DB Source Output]"
-          TopLeft="169.312499138527,80.929823775811">
+          Id="Package\DFT Destination.Paths[Sort Output]"
+          TopLeft="163.916665083418,219.877196318005">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,70.280705386142"
+              EndConnector="0,88.0175463194555"
               Start="0,0"
-              End="0,62.780705386142">
+              End="0,80.5175463194555">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,62.780705386142" />
+                    End="0,80.5175463194555" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT Destination.Paths[Row Count Output 1]"
+          TopLeft="163.437499315478,350.561409304127">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,98.8596482856998"
+              Start="0,0"
+              End="0,91.3596482856998">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,91.3596482856998" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
